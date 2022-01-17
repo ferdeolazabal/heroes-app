@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { AuthContext } from '../../auth/AuthContext'
 import { SearchScreen } from '../search/SearchScreen'
+import { FaUserCircle } from 'react-icons/fa';
+import { types } from '../../types/types';
+import { useHistory } from 'react-router-dom';
 
-export const Navbar = () => {
+export const Navbar = ( ) => {
+
+    const history = useHistory()
+    const { dispatch, user } = useContext( AuthContext )
+    
+    const handleLogout = () => {
+        
+        const user = {
+            logged: false
+        }
+
+        dispatch({
+            type: types.logout,
+            payload: user
+        })
+
+        history.replace('/login')
+    }
+
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
             
@@ -44,20 +66,21 @@ export const Navbar = () => {
                     </NavLink>
                 </div>
             </div>
-
         
             <div className="d-flex">
-                    
                 <ul className="navbar-nav ml-auto ">
                     
-                    <NavLink 
-                        activeClassName="active"
-                        className="nav-item nav-link" 
-                        exact
-                        to="/login"
+                    <span className="nav-item nav-link tet-info">
+                        { user.name }{' '}
+                        <FaUserCircle />
+                    </span>
+
+                    <span
+                        className="nav-item nav-link btn"
+                        onClick={ handleLogout }
                     >
                         Logout
-                    </NavLink>
+                    </span>
                 </ul>
             </div>
         </nav>
