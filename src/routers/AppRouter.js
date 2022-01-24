@@ -29,7 +29,7 @@ export const AppRouter = () => {
                     <PrivateRoute 
                         path="/" 
                         component={ DashBoardRoutes } 
-                        isAunthenticated={ user.logged }
+                        isAuthenticated={ user.logged }
                     />
                 </Switch>
             </div>

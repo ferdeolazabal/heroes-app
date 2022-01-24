@@ -4,7 +4,7 @@ import { Redirect, Route } from 'react-router-dom'
 {/* : ( <div>You are not authorized to view this page</div> ) */}
 
 export const PrivateRoute = ({
-    isAunthenticated,
+    isAuthenticated,
     component: Component,
     ...rest
 }) => {
@@ -14,7 +14,7 @@ export const PrivateRoute = ({
     return (
         <Route {...rest}
             component={ (props) => (
-                ( isAunthenticated ) 
+                ( isAuthenticated ) 
                     ? ( <Component {...props} /> )
                     : ( <Redirect to="/Login" /> )
             ) }
@@ -23,6 +23,6 @@ export const PrivateRoute = ({
 }
 
 PrivateRoute.propTypes = {
-    isAunthenticated: PropTypes.bool.isRequired,
+    isAuthenticated: PropTypes.bool.isRequired,
     component: PropTypes.func.isRequired,
 }
