@@ -5,7 +5,7 @@ Tambien podemos encontrar una seccion de busqueda para los distintos heroes.
 
 ## Build
 
-[https://ferdeolazabal.github.io/marvel](https://ferdeolazabal.github.io/marvel)
+[https://ferdeolazabal.github.io/heroes-app/](https://ferdeolazabal.github.io/heroes-app/)
 
 ### Desarrollo
 
