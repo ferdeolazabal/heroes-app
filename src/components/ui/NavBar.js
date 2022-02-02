@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { AuthContext } from '../../auth/AuthContext'
-import { SearchScreen } from '../search/SearchScreen'
 import { FaUserCircle } from 'react-icons/fa';
 import { types } from '../../types/types';
 import { useHistory } from 'react-router-dom';
@@ -9,7 +8,7 @@ import { useHistory } from 'react-router-dom';
 export const Navbar = ( ) => {
 
     const history = useHistory()
-    const { dispatch, user } = useContext( AuthContext )
+    const { dispatch } = useContext( AuthContext )
     
     const handleLogout = () => {
         
