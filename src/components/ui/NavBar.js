@@ -71,7 +71,6 @@ export const Navbar = ( ) => {
                 <ul className="navbar-nav ml-auto ">
                     
                     <span className="nav-item nav-link tet-info">
-                        { user.name }{' '}
                         <FaUserCircle />
                     </span>
 
