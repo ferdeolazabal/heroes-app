@@ -3,7 +3,7 @@
 Aplicación web creada con React donde muestra distintos heroes de Marvel y DC Comics.
 Tambien podemos encontrar una seccion de busqueda para los distintos heroes.
 
-## Build
+## Live Test
 
 [https://ferdeolazabal.github.io/heroes-app/](https://ferdeolazabal.github.io/heroes-app/)
 
